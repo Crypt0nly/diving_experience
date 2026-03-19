@@ -193,15 +193,15 @@ function LandingPage() {
 
           <div className="gallery-mosaic">
             {[
-              { location: 'Great Barrier Reef', country: 'Australia', stats: '32 m · 55 min · Manta ray', gradient: 'linear-gradient(135deg, #064e3b, #0f766e)' },
-              { location: 'Blue Hole', country: 'Belize', stats: '40 m · 35 min · Hammerhead', gradient: 'linear-gradient(135deg, #0c4a6e, #0ea5e9)' },
-              { location: 'Ras Mohammed', country: 'Egypt', stats: '18 m · 62 min · Turtle, moray eel', gradient: 'linear-gradient(135deg, #1e3a5f, #3b82f6)' },
-              { location: 'South Ari Atoll', country: 'Maldives', stats: '22 m · 50 min · Whale shark', gradient: 'linear-gradient(135deg, #134e4a, #14b8a6)' },
-              { location: 'Cenotes', country: 'Mexico', stats: '15 m · 45 min · Cave formations', gradient: 'linear-gradient(135deg, #3f3f46, #71717a)' },
-              { location: 'Sipadan', country: 'Malaysia', stats: '28 m · 52 min · Barracuda tornado', gradient: 'linear-gradient(135deg, #1e3a5f, #2563eb)' },
+              { location: 'Great Barrier Reef', country: 'Australia', stats: '32 m · 55 min · Manta ray', image: 'https://images.unsplash.com/photo-1544551763-46a013bb70d5?w=800&q=80' },
+              { location: 'Blue Hole', country: 'Belize', stats: '40 m · 35 min · Hammerhead', image: 'https://images.unsplash.com/photo-1682687220742-aba13b6e50ba?w=800&q=80' },
+              { location: 'Ras Mohammed', country: 'Egypt', stats: '18 m · 62 min · Turtle, moray eel', image: 'https://images.unsplash.com/photo-1591025207163-942350e47db2?w=800&q=80' },
+              { location: 'South Ari Atoll', country: 'Maldives', stats: '22 m · 50 min · Whale shark', image: 'https://images.unsplash.com/photo-1560275619-4662e36fa65c?w=800&q=80' },
+              { location: 'Cenotes', country: 'Mexico', stats: '15 m · 45 min · Cave formations', image: 'https://images.unsplash.com/photo-1682695797221-8164ff1fafc9?w=800&q=80' },
+              { location: 'Sipadan', country: 'Malaysia', stats: '28 m · 52 min · Barracuda tornado', image: 'https://images.unsplash.com/photo-1546026423-cc4642628d2b?w=800&q=80' },
             ].map((item, i) => (
               <div className={`gallery-tile tile-${i + 1}`} key={i}>
-                <div className="tile-bg" style={{ background: item.gradient }}></div>
+                <img className="tile-bg-img" src={item.image} alt={`${item.location}, ${item.country} dive`} />
                 <div className="tile-content">
                   <span className="tile-country">{item.country}</span>
                   <h4>{item.location}</h4>
