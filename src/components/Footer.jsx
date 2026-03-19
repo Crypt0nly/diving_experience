@@ -5,42 +5,49 @@ function Footer() {
   return (
     <footer className="footer">
       <div className="container">
-        <div className="footer-grid">
-          <div className="footer-col footer-brand">
-            <h4><span>🤿</span> DivePlaque</h4>
-            <p>Turning dive memories into premium display pieces.</p>
+        <div className="footer-top">
+          <div className="footer-brand">
+            <div className="footer-logo">
+              <span className="logo-mark">DP</span>
+              <div className="logo-text">
+                <span className="logo-name">DivePlaque</span>
+                <span className="logo-tagline">est. 2024</span>
+              </div>
+            </div>
+            <p>Handcrafted acrylic dive log plaques, mounted on premium hardwood. Every piece tells the story of a dive worth remembering.</p>
           </div>
           <div className="footer-col">
             <h4>Shop</h4>
             <ul>
               <li><Link to="/customize">Create a Plaque</Link></li>
-              <li><a href="/#products">Sizes & Pricing</a></li>
+              <li><a href="/#collection">Collection</a></li>
               <li><a href="#">Gift Cards</a></li>
             </ul>
           </div>
           <div className="footer-col">
-            <h4>Business</h4>
+            <h4>Partners</h4>
             <ul>
-              <li><a href="/#b2b">Dive Center Partners</a></li>
-              <li><a href="/#b2b-form">Become a Partner</a></li>
-              <li><a href="#">Wholesale Pricing</a></li>
+              <li><Link to="/partners">For Dive Centers</Link></li>
+              <li><Link to="/partners#apply">Become a Partner</Link></li>
+              <li><a href="#">Wholesale</a></li>
             </ul>
           </div>
           <div className="footer-col">
-            <h4>Support</h4>
+            <h4>Company</h4>
             <ul>
-              <li><a href="#">Shipping & Delivery</a></li>
-              <li><a href="#">Returns & Refunds</a></li>
-              <li><a href="#">Contact Us</a></li>
+              <li><a href="#">About</a></li>
+              <li><a href="#">Shipping</a></li>
+              <li><a href="#">Contact</a></li>
               <li><a href="#">FAQ</a></li>
             </ul>
           </div>
         </div>
+        <div className="footer-divider"></div>
         <div className="footer-bottom">
           <p>&copy; 2026 DivePlaque. All rights reserved.</p>
           <div className="footer-links">
-            <a href="#">Privacy Policy</a>
-            <a href="#">Terms of Service</a>
+            <a href="#">Privacy</a>
+            <a href="#">Terms</a>
           </div>
         </div>
       </div>

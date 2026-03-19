@@ -4,6 +4,7 @@ import Footer from './components/Footer'
 import LandingPage from './pages/LandingPage'
 import CustomizePage from './pages/CustomizePage'
 import CheckoutPage from './pages/CheckoutPage'
+import PartnersPage from './pages/PartnersPage'
 import './App.css'
 
 function App() {
@@ -15,6 +16,7 @@ function App() {
           <Route path="/" element={<LandingPage />} />
           <Route path="/customize" element={<CustomizePage />} />
           <Route path="/checkout" element={<CheckoutPage />} />
+          <Route path="/partners" element={<PartnersPage />} />
         </Routes>
         <Footer />
       </div>

@@ -9,7 +9,7 @@ function Navbar() {
   const location = useLocation()
 
   useEffect(() => {
-    const handleScroll = () => setScrolled(window.scrollY > 20)
+    const handleScroll = () => setScrolled(window.scrollY > 40)
     window.addEventListener('scroll', handleScroll)
     return () => window.removeEventListener('scroll', handleScroll)
   }, [])
@@ -22,24 +22,27 @@ function Navbar() {
     <nav className={`navbar ${scrolled ? 'scrolled' : ''}`}>
       <div className="container nav-container">
         <Link to="/" className="logo">
-          <span className="logo-icon">🤿</span>
-          <span className="logo-text">DivePlaque</span>
+          <span className="logo-mark">DP</span>
+          <div className="logo-text">
+            <span className="logo-name">DivePlaque</span>
+            <span className="logo-tagline">est. 2024</span>
+          </div>
         </Link>
 
         <ul className={`nav-links ${mobileOpen ? 'open' : ''}`}>
-          <li><a href="/#how-it-works" onClick={() => setMobileOpen(false)}>How It Works</a></li>
-          <li><a href="/#products" onClick={() => setMobileOpen(false)}>Products</a></li>
-          <li><a href="/#b2b" onClick={() => setMobileOpen(false)}>Dive Centers</a></li>
-          <li><a href="/#reviews" onClick={() => setMobileOpen(false)}>Reviews</a></li>
+          <li><a href="/#collection" onClick={() => setMobileOpen(false)}>Collection</a></li>
+          <li><a href="/#process" onClick={() => setMobileOpen(false)}>Process</a></li>
+          <li><a href="/#gallery" onClick={() => setMobileOpen(false)}>Gallery</a></li>
+          <li><Link to="/partners" onClick={() => setMobileOpen(false)}>Partners</Link></li>
           <li>
-            <Link to="/customize" className="btn btn-primary nav-cta" onClick={() => setMobileOpen(false)}>
+            <Link to="/customize" className="btn btn-gold nav-cta" onClick={() => setMobileOpen(false)}>
               Create Yours
             </Link>
           </li>
         </ul>
 
         <button className="mobile-toggle" onClick={() => setMobileOpen(!mobileOpen)} aria-label="Toggle menu">
-          {mobileOpen ? <X size={24} /> : <Menu size={24} />}
+          {mobileOpen ? <X size={22} /> : <Menu size={22} />}
         </button>
       </div>
     </nav>

@@ -11,44 +11,42 @@ function PlaqueMockup({ data = {}, imagePreview = null, size = 'standard' }) {
   } = data
 
   return (
-    <div className={`plaque-mockup plaque-${size}`}>
-      <div className="plaque-frame">
+    <div className={`plaque plaque-${size}`}>
+      <div className="plaque-glass">
+        <div className="plaque-glass-shine"></div>
         <div className="plaque-photo-area">
           {imagePreview ? (
             <img src={imagePreview} alt="Your dive photo" className="plaque-user-photo" />
           ) : (
-            <div className="plaque-photo-placeholder">
-              <div className="placeholder-content">
-                <span className="placeholder-icon">📸</span>
-                <span>Your dive photo</span>
-              </div>
+            <div className="plaque-photo-default">
+              <span>Your dive photo</span>
             </div>
           )}
         </div>
-        <div className="plaque-details">
+        <div className="plaque-content">
           <h3 className="plaque-location">{location || 'Your Dive Location'}</h3>
-          <div className="plaque-stats">
-            <div className="plaque-stat">
-              <Gauge size={16} />
+          <div className="plaque-stats-list">
+            <div className="plaque-stat-row">
+              <Gauge size={14} />
               <span>Maximum Depth: <strong>{maxDepth || '—'} m</strong></span>
             </div>
-            <div className="plaque-stat">
-              <Clock size={16} />
+            <div className="plaque-stat-row">
+              <Clock size={14} />
               <span>Dive Time: <strong>{diveTime || '—'} min</strong></span>
             </div>
-            <div className="plaque-stat">
-              <Thermometer size={16} />
+            <div className="plaque-stat-row">
+              <Thermometer size={14} />
               <span>Water Temp: <strong>{waterTemp || '—'}°C</strong></span>
             </div>
-            <div className="plaque-stat">
-              <Fish size={16} />
+            <div className="plaque-stat-row">
+              <Fish size={14} />
               <span>Wildlife: <strong>{wildlife || '—'}</strong></span>
             </div>
           </div>
         </div>
       </div>
-      <div className="plaque-base">
-        <span>Dive Log</span>
+      <div className="plaque-wood-base">
+        <span className="plaque-engraving">Dive Log</span>
       </div>
     </div>
   )
